@@ -82,6 +82,9 @@ namespace MatchGamev
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
+            if(textBlock == null)
+                return;
+            
             if (findingMatch == false)
             {
                 lastTextBolockClicked = textBlock;
